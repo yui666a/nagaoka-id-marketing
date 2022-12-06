@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+    <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+    <!-- <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script> -->
     <script type="text/javascript" src="./script/script1.js"></script>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <!-- <div class="arjs-loader">
@@ -41,7 +43,34 @@
           alpha-test
         ></a-image>
       </a-marker>
-      <a-entity camera></a-entity>
+      <!-- <a-entity camera></a-entity> -->
+      <a-entity camera>
+        <a-entity
+          cursor="fuse: true;"
+          position="0 0 -2"
+          geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05;"
+          material="color: #acacac; shader: flat; opacity: 0.8"
+        >
+          <a-animation
+            begin="click"
+            easing="ease-in"
+            attribute="scale"
+            dur="150"
+            fill="forwards"
+            from="0.1 0.1 0.1"
+            to="1 1 1"
+          ></a-animation>
+          <a-animation
+            begin="cursor-fusing"
+            easing="ease-in"
+            attribute="scale"
+            dur="1500"
+            fill="backwards"
+            from="1 1 1"
+            to="0.1 0.1 0.1"
+          ></a-animation>
+        </a-entity>
+      </a-entity>
     </a-scene>
   </body>
 </html>
