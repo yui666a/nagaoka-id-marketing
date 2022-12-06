@@ -2,10 +2,27 @@
 // 焦点を合わせるとSNSへ移動
 ////////////////////////////////////
 const layout = document.querySelector("#layout");
-layout.addEventListener("click", function () {
-  // location.href = "https://www.tradewaltz.com/";
-  console.log("visit 'https://www.tradewaltz.com/'");
+const description1 = document.querySelector("#description1");
+
+// layout.addEventListener("click", function () {
+//   onClickLayout();
+// });
+layout.addEventListener("mouseenter", function () {
+  console.log("マウスエンター")
+  description1.style.display = "block";
+  onClickLayout();
 });
+
+layout.addEventListener("mouseleave", function () {
+  console.log("マウスリーブ")
+  description1.style.display = "none";
+  onClickLayout();
+});
+
+
+function onClickLayout() {
+  console.log("visit 'https://www.tradewaltz.com/'");
+}
 
 ////////////////////////////////////
 // 焦点を合わせると色変化

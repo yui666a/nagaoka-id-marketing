@@ -17,6 +17,10 @@
   color: white;
 }
 
+.description {
+  display: none;
+}
+
 /* スクショ用 */
 .ui {
   position: absolute;

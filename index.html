@@ -8,13 +8,6 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div class="arjs-loader">
-      <div>
-        読み込み中です。少々お待ちください。<br />
-        この表示が消えたら、カメラでQRコードを映してください.
-      </div>
-    </div>
-
     <a-scene
       vr-mode-ui="enabled: false"
       embedded
@@ -49,6 +42,16 @@
           scale="1 1 1"
           transparent="true"
           alpha-test
+        ></a-image>
+        <a-image
+          id="description1"
+          src="#img_layout"
+          position="1 0 0"
+          rotation="-90 0 0"
+          scale="1 1 1"
+          transparent="true"
+          alpha-test
+          class="description"
         ></a-image>
       </a-marker>
       <!-- <a-entity camera></a-entity> -->
