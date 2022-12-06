@@ -171,14 +171,16 @@ const AFrameScene = () => {
     //   <Camera />
     // </a-scene>
     <a-scene embedded arjs="debugUIEnabled:true;">
-    <a-marker type='pattern' url='/pattern-tradewaltz.patt'>
-      <a-box position="0 0.5 0" wireframe="true"></a-box>
-    </a-marker>
-    <a-entity camera></a-entity>
-  </a-scene>
+      <a-marker
+        preset="hiro"
+        // type='pattern' url='/pattern-tradewaltz.patt'
+      >
+        <a-box position="0 0.5 0" wireframe="true"></a-box>
+      </a-marker>
+      <a-entity camera></a-entity>
+    </a-scene>
     //   ),
     //   []
-
   );
 
   return scene;
