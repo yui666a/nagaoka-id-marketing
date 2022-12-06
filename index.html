@@ -6,6 +6,12 @@
     <script type="text/javascript" src="./script/script1.js"></script>
   </head>
   <body>
+    <!-- <div class="arjs-loader">
+      <div>
+        読み込み中です，少々お待ちください．この表示が消えたらカメラで名刺を映してください
+      </div>
+    </div> -->
+
     <a-scene vr-mode-ui="enabled: false" embedded arjs>
       <a-assets timeout="10000">
         <img id="layout" src="./layout.jpg" />
@@ -29,7 +35,7 @@
           id="layout"
           src="#layout"
           position="0 0 0"
-          rotation="90 0 0"
+          rotation="-90 0 0"
           scale="1 1 1"
           transparent="true"
           alpha-test
