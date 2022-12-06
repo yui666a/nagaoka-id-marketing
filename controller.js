@@ -8,18 +8,22 @@ const description1 = document.querySelector("#description1");
 //   onClickLayout();
 // });
 layout.addEventListener("mouseenter", function () {
-  console.log("マウスエンター")
-  description1.style.display = "block";
-  onClickLayout();
+  onMouseEnter();
 });
 
 layout.addEventListener("mouseleave", function () {
-  console.log("マウスリーブ")
-  description1.style.display = "none";
-  onClickLayout();
+  onMouseLeave();
 });
 
 
+function onMouseEnter() {
+  console.log("マウスエンター")
+  console.log("visit 'https://www.tradewaltz.com/'");
+}
+function onMouseLeave() {
+  console.log("マウスリーブ")
+  console.log("visit 'https://www.tradewaltz.com/'");
+}
 function onClickLayout() {
   console.log("visit 'https://www.tradewaltz.com/'");
 }
