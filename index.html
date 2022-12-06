@@ -8,15 +8,23 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <!-- <div class="arjs-loader">
+    <div class="arjs-loader">
       <div>
-        読み込み中です，少々お待ちください．この表示が消えたらカメラで名刺を映してください
+        読み込み中です。少々お待ちください。<br />
+        この表示が消えたら、カメラでQRコードを映してください.
       </div>
-    </div> -->
+    </div>
 
-    <a-scene vr-mode-ui="enabled: false" embedded arjs>
+    <a-scene
+      vr-mode-ui="enabled: false"
+      embedded
+      embedded
+      cursor="rayOrigin: mouse"
+      renderer="logarithmicDepthBuffer: true;"
+      arjs="trackingMethod: best; sourceType: webcam; debugUIEnabled: false;"
+    >
       <a-assets timeout="10000">
-        <img id="layout" src="./layout.jpg" />
+        <img id="img_layout" src="./layout.jpg" />
         <!-- <img id="telutelu" src="./assets/design2.jpg" /> -->
       </a-assets>
 
@@ -35,7 +43,7 @@
       <a-marker preset="custom" type="pattern" url="./pattern-qr.patt">
         <a-image
           id="layout"
-          src="#layout"
+          src="#img_layout"
           position="0 0 0"
           rotation="-90 0 0"
           scale="1 1 1"
