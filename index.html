@@ -32,7 +32,20 @@
     <!-- シーンの追加とデバックUIを非表示 -->
     <a-scene embedded arjs="debugUIEnabled:false;">
       <!-- ② hiroマーカーでのソース -->
-      <a-marker type="pattern" url="/pattern-tradewaltz.patt">
+      <a-marker preset="hiro">
+        <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#111">
+          <a-animation
+            attribute="position"
+            to="0 1 0"
+            direction="alternate"
+            dur="2000"
+            repeat="indefinite"
+          >
+          </a-animation>
+        </a-sphere>
+      </a-marker>
+
+      <a-marker preset="custom" type="pattern" url="/pattern-tradewaltz.patt">
         <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#111">
           <a-animation
             attribute="position"
