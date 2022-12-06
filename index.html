@@ -1,64 +1,16 @@
-<!-- <!DOCTYPE html>
-<html>
-  <head>
-    <title>Telu Telu Boy AR</title>
-    <meta name="description" content="Telu Telu Boy AR" />
-  </head>
-  <body style="margin: 0px; overflow: hidden">
-    <h1><a href="./fly.html">浮き上がるデモ</a></h1>
-    <h1><a href="./capture-test.html">写真撮影のデモ</a></h1>
-    <h1><a href="./nft-test.html">画像を認識して表示するデモ</a></h1>
-    <h1><a href="./location-test.html">GPSで場所を取得・表示するデモ</a></h1>
-  </body>
-</html> -->
-
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>マーケティング論 AR</title>
-    <meta
-      name="description"
-      content="長岡造形大学　マーケティング論 ARサイト"
-    />
-    <!-- ① スクリプトの読み込み -->
-    <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
-    <script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.2/aframe/build/aframe-ar.js"></script>
-
-    <!-- ① スクリプトの読み込み -->
-    <link href="./style.css" rel="stylesheet" type="text/css" />
-    <script type="text/javascript" src="./script/script1.js"></script>
-  </head>
-  <body style="margin: 0; overflow: hidden">
-    <!-- シーンの追加とデバックUIを非表示 -->
-    <a-scene embedded arjs="debugUIEnabled:false;">
-      <!-- ② hiroマーカーでのソース -->
-      <a-marker preset="hiro">
-        <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#111">
-          <a-animation
-            attribute="position"
-            to="0 1 0"
-            direction="alternate"
-            dur="2000"
-            repeat="indefinite"
-          >
-          </a-animation>
-        </a-sphere>
-      </a-marker>
-
-      <a-marker preset="custom" type="pattern" url="/pattern-tradewaltz.patt">
-        <a-sphere scale=".25 .25 .25" position="0 .5 0" color="#111">
-          <a-animation
-            attribute="position"
-            to="0 1 0"
-            direction="alternate"
-            dur="2000"
-            repeat="indefinite"
-          >
-          </a-animation>
-        </a-sphere>
-      </a-marker>
-
-      <a-entity camera></a-entity>
-    </a-scene>
-  </body>
+<!DOCTYPE html> 
+<html> 
+  <head> 
+    <script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script> 
+    <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>  
+  </head> 
+  <body> 
+    <a-scene  vr-mode-ui="enabled: false" embedded arjs> 
+      <a-marker preset="custom"  type="pattern" url="marker.patt"> 
+        <a-box color="blue" position="0 0 0" wireframe="true"></a-box> 
+        <a-box color="red" position="0 1 0" depth="0.5" width="0.5" height="0.5" wireframe="true"></a-box> 
+      </a-marker> 
+      <a-entity camera></a-entity> 
+    </a-scene> 
+  </body> 
 </html>
