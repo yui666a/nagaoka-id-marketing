@@ -6,7 +6,17 @@
   </head> 
   <body> 
     <a-scene  vr-mode-ui="enabled: false" embedded arjs> 
+      <!-- <a-assets timeout="10000">
+        <img id="telu" src="./assets/design1.jpg"></img>
+        <img id="telutelu" src="./assets/design2.jpg"></img>
+      </a-assets> -->
+
       <a-marker preset="custom"  type="pattern" url="./pattern-tradewaltz.patt"> 
+        <a-box color="blue" position="0 0 0" wireframe="true"></a-box> 
+        <a-box color="red" position="0 1 0" depth="0.5" width="0.5" height="0.5" wireframe="true"></a-box> 
+      </a-marker> 
+
+      <a-marker preset="custom"  type="pattern" url="./assets/marker/pattern-QR.patt"> 
         <a-box color="blue" position="0 0 0" wireframe="true"></a-box> 
         <a-box color="red" position="0 1 0" depth="0.5" width="0.5" height="0.5" wireframe="true"></a-box> 
       </a-marker> 
