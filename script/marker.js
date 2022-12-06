@@ -171,7 +171,7 @@ const AFrameScene = () => {
     //   <Camera />
     // </a-scene>
     <a-scene embedded arjs="debugUIEnabled:false;trackingMethod:best;patternRatio:0.90;sourceType: webcam;">
-    <a-marker type='pattern' url='./assets/marker/pattern-dx.patt'>
+    <a-marker type='pattern' url='./assets/marker/pattern-tradewaltz.patt'>
       <a-box position="0 0.5 0" wireframe="true"></a-box>
     </a-marker>
     <a-entity camera></a-entity>
